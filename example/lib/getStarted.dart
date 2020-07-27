@@ -44,16 +44,11 @@ class GetStartedPage extends StatelessWidget {
       child: GestureDetector(
           onHorizontalDragUpdate:  (DragUpdateDetails details) {
            
-            if (details.delta.dx < -3.5){
-                Navigator.of(context).push( CupertinoPageRoute( builder:((context) {
-                return GetStartedPage();
-            })));
-            }
-            else{
+            
               if(details.delta.dx > 3.5){
                 Navigator.of(context).pop();
               }
-            }
+            
           }
         )), 
         Align(alignment: Alignment(0, 0.75),
