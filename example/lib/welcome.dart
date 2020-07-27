@@ -1,17 +1,16 @@
-
 import 'package:flutter/material.dart';
-import 'package:example/findLocal.dart';
+import 'package:example/discover.dart';
 import 'package:flutter/cupertino.dart';
-class ConnectPage extends StatelessWidget {
+
+class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
     return new Scaffold(
         body: new Stack(children: <Widget>[
       new Container(
         decoration: new BoxDecoration(
           image: new DecorationImage(
-            image: new AssetImage("assets/Artists.png"),
+            image: new AssetImage("assets/Welcome.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -21,7 +20,7 @@ class ConnectPage extends StatelessWidget {
           child: Padding(
               padding: EdgeInsets.all(50),
               child: Text(
-                "Connect with Artists\n",
+                "Welcome to Glass Finder\n",
                 style: TextStyle(
                     fontFamily: "Lato Black",
                     color: Colors.white,
@@ -32,47 +31,28 @@ class ConnectPage extends StatelessWidget {
           child: Padding(
               padding: EdgeInsets.all(50),
               child: Text(
-                "Connect directly with your favorite artists to follow them or securly purchase their work\n",
+                "Glass Finder is a brand new way to buy and sell glass art. It's more than just app- it's a passionate community\n",
                 style: TextStyle(
                     fontFamily: "Lato Light",
                     color: Colors.white,
                     fontSize: 14),
-              ))),  
-      Align(alignment: Alignment.center,
-      child: GestureDetector(
-          onHorizontalDragUpdate:  (DragUpdateDetails details) {
-           
-            if (details.delta.dx < -3.5){
-                Navigator.of(context).push( CupertinoPageRoute( builder:((context) {
-                return FindLocalPage();
-            })));
+              ))),
+      Align(
+          alignment: Alignment.center,
+          child: GestureDetector(
+              onHorizontalDragUpdate: (DragUpdateDetails details) {
+            if (details.delta.dx < -3.5) {
+              Navigator.of(context)
+                  .push(CupertinoPageRoute(builder: ((context) {
+                return DiscoverPage();
+              })));
             }
-            else{
-              if(details.delta.dx > 3.5){
-                Navigator.of(context).pop();
-              }
-            }
-          }
-        )), 
-        Align(
+          })),
+      Align(
           alignment: Alignment(0, 0.95),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const <Widget>[
-              Padding(
-                  padding: EdgeInsets.all(3),
-                  child: Icon(
-                    Icons.lens,
-                    color: Colors.white54,
-                    size: 10.0,
-                  )),
-              Padding(
-                  padding: EdgeInsets.all(3),
-                  child: Icon(
-                    Icons.lens,
-                    color: Colors.white54,
-                    size: 10.0,
-                  )),
               Padding(
                   padding: EdgeInsets.all(3),
                   child: Icon(
@@ -91,10 +71,24 @@ class ConnectPage extends StatelessWidget {
                   padding: EdgeInsets.all(3),
                   child: Icon(
                     Icons.lens,
+                    color: Colors.white54,
+                    size: 10.0,
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
+                    color: Colors.white54,
+                    size: 10.0,
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
                     color: Colors.white24,
                     size: 10.0,
                   )),
-                Padding(
+              Padding(
                   padding: EdgeInsets.all(3),
                   child: Icon(
                     Icons.lens,
@@ -103,9 +97,6 @@ class ConnectPage extends StatelessWidget {
                   )),
             ],
           ))
-    ]
-    )
-    );
-    
+    ]));
   }
 }

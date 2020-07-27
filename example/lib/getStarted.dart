@@ -92,6 +92,55 @@ class GetStartedPage extends StatelessWidget {
             ),
           )
         ),
+        Align(
+          alignment: Alignment(0, 0.95),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
+                    color: Colors.transparent,
+                    size: 10.0,
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
+                    color: Colors.white24,
+                    size: 10.0,
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
+                    color: Colors.white54,
+                    size: 10.0,
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
+                    color: Colors.white54,
+                    size: 10.0,
+                  )),
+              Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
+                    color: Colors.white54,
+                    size: 10.0,
+                  )),
+                  Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Icon(
+                    Icons.lens,
+                    color: Colors.black54,
+                    size: 10.0,
+                  )),
+            ],
+          )) 
     ]
     )
     );
