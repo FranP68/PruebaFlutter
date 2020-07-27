@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:example/signup.dart';
+import 'package:example/guest.dart';
+import 'package:example/login.dart';
+
 class GetStartedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -64,7 +68,11 @@ class GetStartedPage extends StatelessWidget {
                     color: Colors.black,
                     fontSize: 14),
                     ),
-            onPressed: (){},
+            onPressed: (){
+                Navigator.of(context).push( CupertinoPageRoute( builder:((context) {
+                    return SignUpPage();
+                })));
+              }
           )
         ), 
         Align(alignment: Alignment(0, 0.9),
@@ -77,7 +85,13 @@ class GetStartedPage extends StatelessWidget {
                     fontFamily: "Lato Regular",
                     color: Colors.black,
                     fontSize: 14),),
-            onPressed: (){},
+            onPressed: (){
+              
+                Navigator.of(context).push( CupertinoPageRoute( builder:((context) {
+                    return LoginFormPage();
+                })));
+              
+            },
           )
         ),
         Align(alignment: Alignment.topRight,
@@ -88,7 +102,15 @@ class GetStartedPage extends StatelessWidget {
                     fontFamily: "Lato Regular",
                     color: Colors.white,
                     fontSize: 14),),
-              onPressed: (){},
+              onPressed: (){
+                  
+              
+                Navigator.of(context).push( CupertinoPageRoute( builder:((context) {
+                    return GuestWelcomePage();
+                })));
+              
+            
+              },
             ),
           )
         ),
